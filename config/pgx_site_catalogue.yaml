@@ -1,0 +1,160 @@
+# Pharmacogenomic Site Catalogue (GRCh38)
+# Derived from CPIC/PharmVar reference data definitions
+genome_build: "GRCh38"
+catalogue_source: "existing_rules"
+
+genes:
+  CYP2C19:
+    build: "GRCh38"
+    sites:
+      - site_id: "CYP2C19:chr10:94761900:C>T"
+        chrom: "chr10"
+        pos: 94761900
+        ref: "C"
+        alt: "T"
+        rsid: "rs12248560"
+        role: "defining"
+        star_allele: "*17"
+        source_ref: "PharmVar_CYP2C19_*17"
+      - site_id: "CYP2C19:chr10:94781859:G>A"
+        chrom: "chr10"
+        pos: 94781859
+        ref: "G"
+        alt: "A"
+        rsid: "rs4244285"
+        role: "defining"
+        star_allele: "*2"
+        source_ref: "PharmVar_CYP2C19_*2"
+      - site_id: "CYP2C19:chr10:94781944:G>A"
+        chrom: "chr10"
+        pos: 94781944
+        ref: "G"
+        alt: "A"
+        rsid: "rs4986893"
+        role: "defining"
+        star_allele: "*3"
+        source_ref: "PharmVar_CYP2C19_*3"
+
+  CYP2C9:
+    build: "GRCh38"
+    sites:
+      - site_id: "CYP2C9:chr10:94938683:C>T"
+        chrom: "chr10"
+        pos: 94938683
+        ref: "C"
+        alt: "T"
+        rsid: "rs1799853"
+        role: "defining"
+        star_allele: "*2"
+        source_ref: "PharmVar_CYP2C9_*2"
+      - site_id: "CYP2C9:chr10:94981296:A>C"
+        chrom: "chr10"
+        pos: 94981296
+        ref: "A"
+        alt: "C"
+        rsid: "rs1057910"
+        role: "defining"
+        star_allele: "*3"
+        source_ref: "PharmVar_CYP2C9_*3"
+
+  CYP2D6:
+    build: "GRCh38"
+    sites:
+      - site_id: "CYP2D6:chr22:42522612:C>T"
+        chrom: "chr22"
+        pos: 42522612
+        ref: "C"
+        alt: "T"
+        rsid: "rs1065852"
+        role: "defining"
+        star_allele: "*10"
+        source_ref: "PharmVar_CYP2D6_*10"
+      - site_id: "CYP2D6:chr22:42523528:AGT>A"
+        chrom: "chr22"
+        pos: 42523528
+        ref: "AGT"
+        alt: "A"
+        rsid: "rs35742686"
+        role: "defining"
+        star_allele: "*3"
+        source_ref: "PharmVar_CYP2D6_*3"
+      - site_id: "CYP2D6:chr22:42524244:C>T"
+        chrom: "chr22"
+        pos: 42524244
+        ref: "C"
+        alt: "T"
+        rsid: "rs3892097"
+        role: "defining"
+        star_allele: "*4"
+        source_ref: "PharmVar_CYP2D6_*4"
+      - site_id: "CYP2D6:chr22:42526694:G>A"
+        chrom: "chr22"
+        pos: 42526694
+        ref: "G"
+        alt: "A"
+        rsid: "rs28371725"
+        role: "defining"
+        star_allele: "*41"
+        source_ref: "PharmVar_CYP2D6_*41"
+
+  DPYD:
+    build: "GRCh38"
+    sites:
+      - site_id: "DPYD:chr1:97573863:C>G"
+        chrom: "chr1"
+        pos: 97573863
+        ref: "C"
+        alt: "G"
+        rsid: "rs75017182"
+        role: "defining"
+        star_allele: "c.1129-5923C>G"
+        source_ref: "CPIC_DPYD_HapB3"
+      - site_id: "DPYD:chr1:97914047:T>G"
+        chrom: "chr1"
+        pos: 97914047
+        ref: "T"
+        alt: "G"
+        rsid: "rs55886062"
+        role: "defining"
+        star_allele: "*13"
+        source_ref: "CPIC_DPYD_*13"
+      - site_id: "DPYD:chr1:97915614:G>A"
+        chrom: "chr1"
+        pos: 97915614
+        ref: "G"
+        alt: "A"
+        rsid: "rs3918290"
+        role: "defining"
+        star_allele: "*2A"
+        source_ref: "CPIC_DPYD_*2A"
+      - site_id: "DPYD:chr1:97980816:A>T"
+        chrom: "chr1"
+        pos: 97980816
+        ref: "A"
+        alt: "T"
+        rsid: "rs67376798"
+        role: "defining"
+        star_allele: "c.2846A>T"
+        source_ref: "CPIC_DPYD_c.2846A>T"
+
+  SLCO1B1:
+    build: "GRCh38"
+    sites:
+      - site_id: "SLCO1B1:chr12:21327153:A>G"
+        chrom: "chr12"
+        pos: 21327153
+        ref: "A"
+        alt: "G"
+        rsid: "rs2306283"
+        role: "defining"
+        star_allele: "*1B"
+        source_ref: "PharmVar_SLCO1B1_*1B"
+      - site_id: "SLCO1B1:chr12:21331549:T>C"
+        chrom: "chr12"
+        pos: 21331549
+        ref: "T"
+        alt: "C"
+        rsid: "rs4149056"
+        role: "defining"
+        star_allele: "*5"
+        source_ref: "PharmVar_SLCO1B1_*5"

@@ -1,0 +1,9 @@
+# Quality Control Thresholds for VCF Site Extraction
+qc_thresholds:
+  min_dp: 10
+  min_gq: 20
+  min_region_call_rate: 0.80
+  allowed_filters:
+    - "PASS"
+    - "."
+    - "0"
