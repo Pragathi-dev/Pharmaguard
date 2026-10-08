@@ -1,0 +1,67 @@
+[
+  {
+    "path": "C:\\Users\\G A  COMPUTERS\\Desktop\\pharmaguard_project copy2 - Copy\\data\\raw\\1000g\\CYP2C19_GRCh38.vcf.gz",
+    "url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20220422_3202_phased_SNV_INDEL_SV/1kGP_high_coverage_ILLUMINA.chr10.filtered.SNV_INDEL_SV_phased_panel.vcf.gz",
+    "region": "10:94757681-94858307",
+    "sha256": "9fce9ba1539b6414f76b302d238133a35e803383a9b55f787949c78e38fbeceb",
+    "bytes": 202,
+    "retrieved_at": "2026-10-08T17:10:24.004082Z",
+    "genome_build": "GRCh38",
+    "provenance_class": "REAL_PATIENT_GENOTYPE",
+    "tool_versions": {
+      "python": "3.11.9"
+    }
+  },
+  {
+    "path": "C:\\Users\\G A  COMPUTERS\\Desktop\\pharmaguard_project copy2 - Copy\\data\\raw\\1000g\\CYP2C9_GRCh38.vcf.gz",
+    "url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20220422_3202_phased_SNV_INDEL_SV/1kGP_high_coverage_ILLUMINA.chr10.filtered.SNV_INDEL_SV_phased_panel.vcf.gz",
+    "region": "10:94933658-94995091",
+    "sha256": "c37d61869b4c061c1dcc314068aa34f6c6f3b5f4a506c56f03f32f35b87a2159",
+    "bytes": 200,
+    "retrieved_at": "2026-10-08T17:10:24.048350Z",
+    "genome_build": "GRCh38",
+    "provenance_class": "REAL_PATIENT_GENOTYPE",
+    "tool_versions": {
+      "python": "3.11.9"
+    }
+  },
+  {
+    "path": "C:\\Users\\G A  COMPUTERS\\Desktop\\pharmaguard_project copy2 - Copy\\data\\raw\\1000g\\CYP2D6_GRCh38.vcf.gz",
+    "url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20220422_3202_phased_SNV_INDEL_SV/1kGP_high_coverage_ILLUMINA.chr22.filtered.SNV_INDEL_SV_phased_panel.vcf.gz",
+    "region": "22:42121499-42135881",
+    "sha256": "b5dd37fccd848b20aee64025a1df0e96e3654e48c1ab7d0c16ca21483fd11954",
+    "bytes": 199,
+    "retrieved_at": "2026-10-08T17:10:24.091726Z",
+    "genome_build": "GRCh38",
+    "provenance_class": "REAL_PATIENT_GENOTYPE",
+    "tool_versions": {
+      "python": "3.11.9"
+    }
+  },
+  {
+    "path": "C:\\Users\\G A  COMPUTERS\\Desktop\\pharmaguard_project copy2 - Copy\\data\\raw\\1000g\\DPYD_GRCh38.vcf.gz",
+    "url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20220422_3202_phased_SNV_INDEL_SV/1kGP_high_coverage_ILLUMINA.chr1.filtered.SNV_INDEL_SV_phased_panel.vcf.gz",
+    "region": "1:97073510-97926794",
+    "sha256": "9e841c7d0dea6497830e335a9fc5e05c86709c6c986dd46199c6b48a0741eb6f",
+    "bytes": 198,
+    "retrieved_at": "2026-10-08T17:10:24.146494Z",
+    "genome_build": "GRCh38",
+    "provenance_class": "REAL_PATIENT_GENOTYPE",
+    "tool_versions": {
+      "python": "3.11.9"
+    }
+  },
+  {
+    "path": "C:\\Users\\G A  COMPUTERS\\Desktop\\pharmaguard_project copy2 - Copy\\data\\raw\\1000g\\SLCO1B1_GRCh38.vcf.gz",
+    "url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20220422_3202_phased_SNV_INDEL_SV/1kGP_high_coverage_ILLUMINA.chr12.filtered.SNV_INDEL_SV_phased_panel.vcf.gz",
+    "region": "12:21126048-21244788",
+    "sha256": "fc2d3b57ccfdb73001b5713df02d8826577c02b576f0807873e3e559fcecbb0e",
+    "bytes": 200,
+    "retrieved_at": "2026-10-08T17:10:24.200929Z",
+    "genome_build": "GRCh38",
+    "provenance_class": "REAL_PATIENT_GENOTYPE",
+    "tool_versions": {
+      "python": "3.11.9"
+    }
+  }
+]

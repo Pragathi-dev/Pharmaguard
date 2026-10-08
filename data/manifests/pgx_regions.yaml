@@ -1,0 +1,40 @@
+# Pharmacogenomic Target Gene Regions (GRCh38)
+genome_build: "GRCh38"
+flank_bp: 5000
+
+genes:
+  CYP2C19:
+    chrom: "chr10"
+    gene_start: 94762681
+    gene_end: 94853307
+    start: 94757681
+    end: 94858307
+    description: "Cytochrome P450 family 2 subfamily C member 19"
+  CYP2C9:
+    chrom: "chr10"
+    gene_start: 94938658
+    gene_end: 94990091
+    start: 94933658
+    end: 94995091
+    description: "Cytochrome P450 family 2 subfamily C member 9"
+  CYP2D6:
+    chrom: "chr22"
+    gene_start: 42126499
+    gene_end: 42130881
+    start: 42121499
+    end: 42135881
+    description: "Cytochrome P450 family 2 subfamily D member 6"
+  DPYD:
+    chrom: "chr1"
+    gene_start: 97078510
+    gene_end: 97921794
+    start: 97073510
+    end: 97926794
+    description: "Dihydropyrimidine dehydrogenase"
+  SLCO1B1:
+    chrom: "chr12"
+    gene_start: 21131048
+    gene_end: 21239788
+    start: 21126048
+    end: 21244788
+    description: "Solute carrier organic anion transporter family member 1B1"

@@ -1,0 +1,6 @@
+drug_name,adverse_event,severity,reported_cases
+Clopidogrel,Treatment Failure,High,1420
+Warfarin,Bleeding,Severe,980
+Simvastatin,Myopathy,High,650
+Fluorouracil,Toxicity,Severe,410
+Codeine,Analgesic Failure,Moderate,310

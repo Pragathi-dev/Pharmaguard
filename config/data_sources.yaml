@@ -1,0 +1,14 @@
+# Data Acquisition Sources & Endpoints
+genome_build: "GRCh38"
+
+igsr_1000g:
+  description: "IGSR 1000 Genomes 30x High-Coverage Phased Resequencing Release (GRCh38)"
+  base_url: "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20220422_3202_phased_SNV_INDEL_SV"
+  vcf_pattern: "1kGP_high_coverage_ILLUMINA.chr{chrom}.filtered.SNV_INDEL_SV_phased_panel.vcf.gz"
+  tbi_pattern: "1kGP_high_coverage_ILLUMINA.chr{chrom}.filtered.SNV_INDEL_SV_phased_panel.vcf.gz.tbi"
+  panel_url: "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20130502.ALL.panel"
+  pedigree_url: "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20130606_sample_info/20130606_g1k.ped"
+
+getrm:
+  description: "CDC GeT-RM Pharmacogenomic Star-Allele Consensus Call Tables"
+  url: "https://raw.githubusercontent.com/cpicpgx/getrm/main/consensus_calls.csv"

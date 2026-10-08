@@ -1,0 +1,16 @@
+# Pharmacovigilance Ingestion Mapping & Isolation Configuration
+pv_dataset:
+  input_path: "data/external/professor_drug_adr.csv"
+  output_path: "data/processed/pv_context.parquet"
+  column_mapping:
+    drug: "drug_name"
+    adr: "adverse_event"
+    severity: "severity"
+    reported_cases: "reported_cases"
+  forbidden_columns:
+    - "sample_id"
+    - "patient_id"
+    - "genotype"
+    - "vcf_sample"
+    - "subject_id"
+    - "individual_id"

@@ -1,0 +1,9 @@
+Sample ID,Gene,Diplotype,Phenotype
+HG00265,CYP2C19,*1/*2,Intermediate Metabolizer
+HG00265,CYP2C9,*1/*1,Normal Metabolizer
+HG00265,CYP2D6,*4/*4,Poor Metabolizer
+HG00265,DPYD,*1/*2A,Intermediate Metabolizer
+HG00265,SLCO1B1,*5/*5,Poor Function
+NA12878,CYP2C19,*1/*1,Normal Metabolizer
+NA12878,CYP2D6,*1/*2,Normal Metabolizer
+NA19240,CYP2C19,*2/*2,Poor Metabolizer
