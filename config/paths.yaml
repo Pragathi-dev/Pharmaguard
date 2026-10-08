@@ -1,0 +1,15 @@
+# PharmaGuard Directory Paths Configuration
+version: "1.0"
+
+data:
+  raw: "data/raw"
+  interim: "data/interim"
+  processed: "data/processed"
+  external: "data/external"
+  knowledge: "data/knowledge"
+
+models: "models"
+reports: "reports"
+logs: "logs"
+experiments: "experiments"
+research: "research"

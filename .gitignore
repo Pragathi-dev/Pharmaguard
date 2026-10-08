@@ -23,8 +23,9 @@ dist/
 build/
 
 # =========================
-# LARGE GENOMIC / BIOINFORMATICS FILES
+# LARGE GENOMIC FILES
 # =========================
+*.vcf
 *.vcf.gz
 *.vcf.gz.tbi
 *.bcf
@@ -53,13 +54,9 @@ build/
 Thumbs.db
 
 # =========================
-# LOGS
+# LOGS / CACHE
 # =========================
 *.log
-
-# =========================
-# TEMPORARY / CACHE
-# =========================
-.cache/
 .pytest_cache/
 .mypy_cache/
+.cache/

@@ -1,0 +1,301 @@
+======================================================================
+PHARMAGUARD PHASE 0 BASELINE VERIFICATION LOG
+======================================================================
+
+1. BACKEND PYTEST SUITE
+----------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\G A  COMPUTERS\Desktop\pharmaguard_project copy2 - Copy
+plugins: anyio-4.14.2
+collected 29 items
+
+tests\test_all_genes.py .....                                            [ 17%]
+tests\test_cyp2c19.py ......                                             [ 37%]
+tests\test_drug_recommendation_engine.py ......                          [ 58%]
+tests\test_integrated_pmgrf_drug_recommendations.py .                    [ 62%]
+tests\test_multigene_risk.py ....                                        [ 75%]
+tests\test_regression.py .....                                           [ 93%]
+backend\test_pipeline.py FF                                              [100%]
+
+================================== FAILURES ===================================
+____________________________ test_sample_isolation ____________________________
+
+    def test_sample_isolation():
+        """PROVES: SAMPLE_001 data never enters SAMPLE_002's prediction."""
+        vcf_path = "pharmaguard_synthetic (1).vcf"
+    
+>       profile_1, available_1, selected_1 = extract_variants(vcf_path, "SAMPLE_001")
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend\test_pipeline.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+file_path = 'pharmaguard_synthetic (1).vcf', target_sample_id = 'SAMPLE_001'
+
+    def extract_variants(file_path, target_sample_id=None):
+        """
+        Rigorously parses VCF files for a single patient's complete genomic profile.
+        Supports multi-sample VCFs by dynamically detecting sample columns.
+        Returns: (patient_profile, available_samples_list, selected_sample_id)
+        """
+    
+        patient_data = {
+            'CYP2C9': {'status': 'NOT_TESTED', 'variants': []},
+            'CYP2C19': {'status': 'NOT_TESTED', 'variants': []},
+            'CYP2D6': {'status': 'NOT_TESTED', 'variants': []},
+            'DPYD': {'status': 'NOT_TESTED', 'variants': []},
+            'SLCO1B1': {'status': 'NOT_TESTED', 'variants': []}
+        }
+    
+        rsid_to_gene_map = {
+            'rs1799853': 'CYP2C9', 'rs1057910': 'CYP2C9', 'rs28371686': 'CYP2C9',
+            'rs12248560': 'CYP2C19', 'rs4244285': 'CYP2C19', 'rs4986893': 'CYP2C19', 'rs7902257': 'CYP2C19',
+            'rs3918290': 'DPYD', 'rs55886062': 'DPYD', 'rs67376798': 'DPYD', 'rs75017182': 'DPYD',
+            'rs4149056': 'SLCO1B1', 'rs2306283': 'SLCO1B1', 'rs11045819': 'SLCO1B1',
+            'rs1065852': 'CYP2D6', 'rs3892097': 'CYP2D6', 'rs12169962': 'CYP2D6',
+            'rs1135840': 'CYP2D6', 'rs4987144': 'CYP2D6', 'rs28371730': 'CYP2D6',
+            'rs1985842': 'CYP2D6', 'rs16947': 'CYP2D6', 'rs1058164': 'CYP2D6',
+            'rs35742686': 'CYP2D6', 'rs28371725': 'CYP2D6'
+        }
+    
+        has_sample_columns = False
+        format_col_idx = 8
+        sample_col_idx = None
+        available_samples = []
+        detected_genes_in_file = set()
+    
+>       with open(file_path, 'r') as f:
+             ^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'pharmaguard_synthetic (1).vcf'
+
+backend\parser.py:35: FileNotFoundError
+_____________________ test_insufficient_evidence_handling _____________________
+
+    def test_insufficient_evidence_handling():
+        """PROVES: 8-column VCFs fallback safely, no fabricated phenotypes."""
+>       profile, _, _ = extract_variants("CYP2C19_1.002.vcf")
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend\test_pipeline.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+file_path = 'CYP2C19_1.002.vcf', target_sample_id = None
+
+    def extract_variants(file_path, target_sample_id=None):
+        """
+        Rigorously parses VCF files for a single patient's complete genomic profile.
+        Supports multi-sample VCFs by dynamically detecting sample columns.
+        Returns: (patient_profile, available_samples_list, selected_sample_id)
+        """
+    
+        patient_data = {
+            'CYP2C9': {'status': 'NOT_TESTED', 'variants': []},
+            'CYP2C19': {'status': 'NOT_TESTED', 'variants': []},
+            'CYP2D6': {'status': 'NOT_TESTED', 'variants': []},
+            'DPYD': {'status': 'NOT_TESTED', 'variants': []},
+            'SLCO1B1': {'status': 'NOT_TESTED', 'variants': []}
+        }
+    
+        rsid_to_gene_map = {
+            'rs1799853': 'CYP2C9', 'rs1057910': 'CYP2C9', 'rs28371686': 'CYP2C9',
+            'rs12248560': 'CYP2C19', 'rs4244285': 'CYP2C19', 'rs4986893': 'CYP2C19', 'rs7902257': 'CYP2C19',
+            'rs3918290': 'DPYD', 'rs55886062': 'DPYD', 'rs67376798': 'DPYD', 'rs75017182': 'DPYD',
+            'rs4149056': 'SLCO1B1', 'rs2306283': 'SLCO1B1', 'rs11045819': 'SLCO1B1',
+            'rs1065852': 'CYP2D6', 'rs3892097': 'CYP2D6', 'rs12169962': 'CYP2D6',
+            'rs1135840': 'CYP2D6', 'rs4987144': 'CYP2D6', 'rs28371730': 'CYP2D6',
+            'rs1985842': 'CYP2D6', 'rs16947': 'CYP2D6', 'rs1058164': 'CYP2D6',
+            'rs35742686': 'CYP2D6', 'rs28371725': 'CYP2D6'
+        }
+    
+        has_sample_columns = False
+        format_col_idx = 8
+        sample_col_idx = None
+        available_samples = []
+        detected_genes_in_file = set()
+    
+>       with open(file_path, 'r') as f:
+             ^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'CYP2C19_1.002.vcf'
+
+backend\parser.py:35: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED backend/test_pipeline.py::test_sample_isolation - FileNotFoundError: [...
+FAILED backend/test_pipeline.py::test_insufficient_evidence_handling - FileNo...
+======================== 2 failed, 27 passed in 0.51s =========================
+
+
+
+2. FRONTEND BUILD (Vite / React)
+----------------------------------------------------------------------
+
+> pharmaguard-frontend@0.0.0 build
+> vite build
+
+[36mvite v8.0.8 [32mbuilding client environment for production...[36m[39m
+[2K
+transforming...âœ“ 30 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.53 kB â”‚ gzip:  0.34 kB
+dist/assets/index-DEaG0VT-.css   14.58 kB â”‚ gzip:  2.96 kB
+dist/assets/index-CPA7Gux7.js   257.19 kB â”‚ gzip: 74.16 kB
+
+[32mâœ“ built in 2.71s[39m
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+
+3. SAMPLE VCF END-TO-END PIPELINE CALL
+----------------------------------------------------------------------
+{
+  "sample_id": "HG00265",
+  "pmgrf_score": 9,
+  "risk_category": "High",
+  "contributing_genes": [
+    {
+      "gene": "CYP2C19",
+      "phenotype": "Poor Metabolizer",
+      "diplotype": "*2/*2",
+      "activity_score": 0.0,
+      "severity_score": 2,
+      "status_code": "CONFIDENTLY_RESOLVED"
+    },
+    {
+      "gene": "DPYD",
+      "phenotype": "Intermediate Metabolizer",
+      "diplotype": "*1/*2A",
+      "activity_score": 1.0,
+      "severity_score": 2,
+      "status_code": "CONFIDENTLY_RESOLVED"
+    },
+    {
+      "gene": "SLCO1B1",
+      "phenotype": "Poor Function",
+      "diplotype": "*5/*5",
+      "activity_score": 0.0,
+      "severity_score": 3,
+      "status_code": "CONFIDENTLY_RESOLVED"
+    },
+    {
+      "gene": "CYP2D6",
+      "phenotype": "Poor Metabolizer",
+      "diplotype": "*4/*4",
+      "activity_score": 0.0,
+      "severity_score": 2,
+      "status_code": "SUCCESS_WITH_SV_LIMITATIONS"
+    }
+  ],
+  "drug_recommendations": [
+    {
+      "drug_name": "Clopidogrel",
+      "associated_gene": "CYP2C19",
+      "phenotype": "Poor Metabolizer",
+      "risk_level": "High",
+      "recommendation": "Avoid Clopidogrel. Use an alternative antiplatelet agent such as Prasugrel or Ticagrelor unless contraindicated.",
+      "rationale": "Markedly deficient CYP2C19 enzyme activity prevents conversion to active metabolite, resulting in clinical non-responsiveness and significantly elevated stent thrombosis risk.",
+      "explanation": "Patient carries CYP2C19 *2/*2 resulting in a Poor Metabolizer phenotype. Absence of CYP2C19 bioactivation prevents conversion of clopidogrel into its active metabolite, leading to therapeutic failure and high stent thrombosis risk. Alternative antiplatelet therapy (e.g., Prasugrel or Ticagrelor) must be prescribed according to CPIC guidance.",
+      "dashboard_metadata": {
+        "drug": "Clopidogrel",
+        "gene": "CYP2C19",
+        "diplotype": "*2/*2",
+        "phenotype": "Poor Metabolizer",
+        "risk_badge": "High",
+        "action_required": true,
+        "alternative_drugs_suggested": [
+          "Prasugrel",
+          "Ticagrelor"
+        ],
+        "guideline": "CPIC Guideline for Clopidogrel and CYP2C19 (2022 Update)"
+      }
+    },
+    {
+      "drug_name": "Warfarin",
+      "associated_gene": "CYP2C9",
+      "phenotype": "Normal Metabolizer",
+      "risk_level": "Low",
+      "recommendation": "Initiate Warfarin at standard starting dose (e.g., 5 mg daily) and adjust according to INR monitoring.",
+      "rationale": "Standard S-warfarin metabolic clearance rate; routine clinical dosing algorithms apply.",
+      "explanation": "Patient carries CYP2C9 *1/*1 resulting in a Normal Metabolizer phenotype. Standard S-warfarin clearance provides predictable anticoagulation response. Standard starting dose and routine INR monitoring are recommended according to CPIC guidance.",
+      "dashboard_metadata": {
+        "drug": "Warfarin",
+        "gene": "CYP2C9",
+        "diplotype": "*1/*1",
+        "phenotype": "Normal Metabolizer",
+        "risk_badge": "Low",
+        "action_required": false,
+        "alternative_drugs_suggested": [],
+        "guideline": "CPIC Guideline for Warfarin Dosing and CYP2C9/VKORC1/CYP4F2 (2020 Update)"
+      }
+    },
+    {
+      "drug_name": "Fluorouracil",
+      "associated_gene": "DPYD",
+      "phenotype": "Intermediate Metabolizer",
+      "risk_level": "Moderate",
+      "recommendation": "Reduce Fluorouracil or Capecitabine starting dose by 25% to 50% based on activity score. Monitor closely for toxicities.",
+      "rationale": "Reduced DPD enzyme clearance leads to increased systemic fluorouracil exposure and elevated risk of severe toxicities (neutropenia, severe diarrhea, mucositis).",
+      "explanation": "Patient carries DPYD *1/*2A resulting in an Intermediate Metabolizer phenotype. Decreased DPD clearance leads to increased systemic drug exposure and risk of severe adverse toxicity. Starting dose reduction of 25-50% and close toxicity monitoring are recommended according to CPIC guidance.",
+      "dashboard_metadata": {
+        "drug": "Fluorouracil",
+        "gene": "DPYD",
+        "diplotype": "*1/*2A",
+        "phenotype": "Intermediate Metabolizer",
+        "risk_badge": "Moderate",
+        "action_required": true,
+        "alternative_drugs_suggested": [
+          "Non-fluoropyrimidine chemotherapy"
+        ],
+        "guideline": "CPIC Guideline for Fluoropyrimidines and DPYD (2017/2022 Update)"
+      }
+    },
+    {
+      "drug_name": "Simvastatin",
+      "associated_gene": "SLCO1B1",
+      "phenotype": "Poor Function",
+      "risk_level": "High",
+      "recommendation": "Avoid Simvastatin or limit dose to <=10 mg daily. Select an alternative statin (Rosuvastatin, Atorvastatin, Pravastatin) or non-statin lipid-lowering therapy.",
+      "rationale": "Severely impaired hepatic transport leads to marked systemic statin accumulation, significantly increasing the risk of severe myopathy and rhabdomyolysis.",
+      "explanation": "Patient carries SLCO1B1 *5/*5 resulting in a Poor Function phenotype. Severely impaired hepatic transporter uptake causes statin accumulation and high rhabdomyolysis risk. Simvastatin should be avoided or dose capped at <=10 mg daily with alternative statins strongly preferred according to CPIC guidance.",
+      "dashboard_metadata": {
+        "drug": "Simvastatin",
+        "gene": "SLCO1B1",
+        "diplotype": "*5/*5",
+        "phenotype": "Poor Function",
+        "risk_badge": "High",
+        "action_required": true,
+        "alternative_drugs_suggested": [
+          "Rosuvastatin",
+          "Atorvastatin",
+          "Pravastatin"
+        ],
+        "guideline": "CPIC Guideline for Statin Therapy and SLCO1B1/ABCG2/CYP2C9 (2022 Update)"
+      }
+    },
+    {
+      "drug_name": "Codeine",
+      "associated_gene": "CYP2D6",
+      "phenotype": "Poor Metabolizer",
+      "risk_level": "High",
+      "recommendation": "Avoid Codeine due to lack of efficacy. Use an alternative analgesic not dependent on CYP2D6 bioactivation (e.g., Morphine, Non-opioids).",
+      "rationale": "Absence of functional CYP2D6 enzyme prevents conversion of codeine to active morphine, resulting in complete lack of pain relief.",
+      "explanation": "Patient carries CYP2D6 *4/*4 resulting in a Poor Metabolizer phenotype. Absence of CYP2D6 bioactivation prevents conversion to active morphine, causing complete lack of analgesic effect. Codeine should be avoided due to complete therapeutic non-responsiveness according to CPIC guidance.",
+      "dashboard_metadata": {
+        "drug": "Codeine",
+        "gene": "CYP2D6",
+        "diplotype": "*4/*4",
+        "phenotype": "Poor Metabolizer",
+        "risk_badge": "High",
+        "action_required": true,
+        "alternative_drugs_suggested": [
+          "Morphine",
+          "Non-opioids (Acetaminophen/NSAIDs)"
+        ],
+        "guideline": "CPIC Guideline for Codeine and CYP2D6 (2020 Update)"
+      }
+    }
+  ]
+}
+
