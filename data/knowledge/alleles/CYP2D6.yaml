@@ -1,0 +1,28 @@
+# CYP2D6 Star Allele Definitions (SNV Only)
+gene: "CYP2D6"
+source: "pharmvar"
+source_version: "5.4.1"
+genome_build: "GRCh38"
+reference_allele: "*1"
+
+alleles:
+  - name: "*3"
+    function: "No function"
+    activity_score: 0.0
+    defining_sites:
+      - "CYP2D6:chr22:42523528:AGT>A"
+  - name: "*4"
+    function: "No function"
+    activity_score: 0.0
+    defining_sites:
+      - "CYP2D6:chr22:42524244:C>T"
+  - name: "*10"
+    function: "Decreased function"
+    activity_score: 0.25
+    defining_sites:
+      - "CYP2D6:chr22:42522612:C>T"
+  - name: "*41"
+    function: "Decreased function"
+    activity_score: 0.5
+    defining_sites:
+      - "CYP2D6:chr22:42526694:G>A"

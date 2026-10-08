@@ -1,0 +1,25 @@
+# CYP2C9 Phenotype Mapping (CPIC Guideline 2020 Update)
+gene: "CYP2C9"
+source: "cpic"
+source_version: "2020.1"
+mapping_type: "diplotype_function"
+
+rules:
+  - condition: "*1/*1"
+    phenotype: "Normal Metabolizer"
+    activity_score: 2.0
+  - condition: "*1/*2"
+    phenotype: "Normal Metabolizer"
+    activity_score: 1.5
+  - condition: "*1/*3"
+    phenotype: "Intermediate Metabolizer"
+    activity_score: 1.0
+  - condition: "*2/*2"
+    phenotype: "Intermediate Metabolizer"
+    activity_score: 1.0
+  - condition: "*2/*3"
+    phenotype: "Intermediate Metabolizer"
+    activity_score: 0.5
+  - condition: "*3/*3"
+    phenotype: "Poor Metabolizer"
+    activity_score: 0.0

@@ -1,0 +1,18 @@
+# SLCO1B1 Star Allele Definitions
+gene: "SLCO1B1"
+source: "pharmvar"
+source_version: "5.4.1"
+genome_build: "GRCh38"
+reference_allele: "*1A"
+
+alleles:
+  - name: "*1B"
+    function: "Normal function"
+    activity_score: 1.0
+    defining_sites:
+      - "SLCO1B1:chr12:21327153:A>G"
+  - name: "*5"
+    function: "Decreased function"
+    activity_score: 0.0
+    defining_sites:
+      - "SLCO1B1:chr12:21331549:T>C"

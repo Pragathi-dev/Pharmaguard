@@ -1,0 +1,23 @@
+# CYP2C19 Star Allele Definitions
+gene: "CYP2C19"
+source: "pharmvar"
+source_version: "5.4.1"
+genome_build: "GRCh38"
+reference_allele: "*1"
+
+alleles:
+  - name: "*2"
+    function: "No function"
+    activity_score: 0.0
+    defining_sites:
+      - "CYP2C19:chr10:94781859:G>A"
+  - name: "*3"
+    function: "No function"
+    activity_score: 0.0
+    defining_sites:
+      - "CYP2C19:chr10:94781944:G>A"
+  - name: "*17"
+    function: "Increased function"
+    activity_score: 1.0
+    defining_sites:
+      - "CYP2C19:chr10:94761900:C>T"

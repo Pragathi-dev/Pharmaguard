@@ -1,0 +1,25 @@
+# SLCO1B1 Phenotype Mapping (CPIC Guideline 2022 Update)
+gene: "SLCO1B1"
+source: "cpic"
+source_version: "2022.1"
+mapping_type: "diplotype_function"
+
+rules:
+  - condition: "*1A/*1A"
+    phenotype: "Normal Function"
+    activity_score: 2.0
+  - condition: "*1A/*1B"
+    phenotype: "Normal Function"
+    activity_score: 2.0
+  - condition: "*1B/*1B"
+    phenotype: "Normal Function"
+    activity_score: 2.0
+  - condition: "*1A/*5"
+    phenotype: "Decreased Function"
+    activity_score: 1.0
+  - condition: "*1B/*5"
+    phenotype: "Decreased Function"
+    activity_score: 1.0
+  - condition: "*5/*5"
+    phenotype: "Poor Function"
+    activity_score: 0.0

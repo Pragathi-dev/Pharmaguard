@@ -1,0 +1,16 @@
+# DPYD Phenotype Mapping (CPIC Guideline 2017/2022 Update)
+gene: "DPYD"
+source: "cpic"
+source_version: "2022.1"
+mapping_type: "activity_score"
+
+rules:
+  - min_as: 2.0
+    max_as: 2.0
+    phenotype: "Normal Metabolizer"
+  - min_as: 1.0
+    max_as: 1.5
+    phenotype: "Intermediate Metabolizer"
+  - min_as: 0.0
+    max_as: 0.5
+    phenotype: "Poor Metabolizer"

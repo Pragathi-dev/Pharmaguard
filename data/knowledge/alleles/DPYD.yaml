@@ -1,0 +1,32 @@
+# DPYD Variant Allele Definitions
+gene: "DPYD"
+source: "cpic"
+source_version: "2022.1"
+genome_build: "GRCh38"
+reference_allele: "*1"
+
+alleles:
+  - name: "*2A"
+    function: "No function"
+    activity_score: 0.0
+    value_score: 0.0
+    defining_sites:
+      - "DPYD:chr1:97915614:G>A"
+  - name: "*13"
+    function: "No function"
+    activity_score: 0.0
+    value_score: 0.0
+    defining_sites:
+      - "DPYD:chr1:97914047:T>G"
+  - name: "c.2846A>T"
+    function: "Decreased function"
+    activity_score: 0.5
+    value_score: 0.5
+    defining_sites:
+      - "DPYD:chr1:97980816:A>T"
+  - name: "c.1129-5923C>G"
+    function: "Decreased function"
+    activity_score: 0.5
+    value_score: 0.5
+    defining_sites:
+      - "DPYD:chr1:97573863:C>G"

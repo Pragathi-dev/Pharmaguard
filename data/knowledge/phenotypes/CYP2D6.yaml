@@ -1,0 +1,19 @@
+# CYP2D6 Phenotype Mapping (CPIC Guideline 2020 Update)
+gene: "CYP2D6"
+source: "cpic"
+source_version: "2020.1"
+mapping_type: "activity_score"
+
+rules:
+  - min_as: 2.25
+    max_as: 99.0
+    phenotype: "Ultrarapid Metabolizer"
+  - min_as: 1.25
+    max_as: 2.0
+    phenotype: "Normal Metabolizer"
+  - min_as: 0.25
+    max_as: 1.0
+    phenotype: "Intermediate Metabolizer"
+  - min_as: 0.0
+    max_as: 0.0
+    phenotype: "Poor Metabolizer"

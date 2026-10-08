@@ -1,0 +1,18 @@
+# CYP2C9 Star Allele Definitions
+gene: "CYP2C9"
+source: "pharmvar"
+source_version: "5.4.1"
+genome_build: "GRCh38"
+reference_allele: "*1"
+
+alleles:
+  - name: "*2"
+    function: "Decreased function"
+    activity_score: 0.5
+    defining_sites:
+      - "CYP2C9:chr10:94938683:C>T"
+  - name: "*3"
+    function: "Decreased function"
+    activity_score: 0.5
+    defining_sites:
+      - "CYP2C9:chr10:94981296:A>C"
