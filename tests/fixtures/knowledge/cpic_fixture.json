@@ -1,0 +1,24 @@
+[
+  {
+    "gene": "CYP2C19",
+    "phenotype": "Poor Metabolizer",
+    "drug": "clopidogrel",
+    "recommendation_text": "Avoid Clopidogrel. Use an alternative antiplatelet agent such as Prasugrel or Ticagrelor unless contraindicated.",
+    "classification_of_recommendation": "Strong",
+    "evidence_level": "High",
+    "guideline_id": "CPIC:CYP2C19:clopidogrel:2022",
+    "guideline_url": "https://cpicpgx.org/guidelines/guideline-for-clopidogrel-and-cyp2c19/",
+    "guideline_version": "2022.1"
+  },
+  {
+    "gene": "CYP2C19",
+    "phenotype": "Normal Metabolizer",
+    "drug": "clopidogrel",
+    "recommendation_text": "Initiate Clopidogrel at standard label-recommended dosage (75 mg once daily).",
+    "classification_of_recommendation": "Strong",
+    "evidence_level": "High",
+    "guideline_id": "CPIC:CYP2C19:clopidogrel:2022",
+    "guideline_url": "https://cpicpgx.org/guidelines/guideline-for-clopidogrel-and-cyp2c19/",
+    "guideline_version": "2022.1"
+  }
+]

@@ -1,0 +1,30 @@
+# PharmaGuard Knowledge Sources Configuration
+version: "1.0"
+updated_at: "2026-10-09"
+
+sources:
+  cpic:
+    name: "Clinical Pharmacogenetics Implementation Consortium (CPIC)"
+    api_url: "https://api.cpicpgx.org/v1/recommendation"
+    website_url: "https://cpicpgx.org"
+    format: "json"
+    license_note: "Creative Commons Attribution 4.0 International (CC BY 4.0) License"
+    genes_of_interest: ["CYP2C19", "CYP2C9", "CYP2D6", "DPYD", "SLCO1B1"]
+    drugs_of_interest: ["clopidogrel", "warfarin", "fluorouracil", "simvastatin", "codeine"]
+
+  pharmvar:
+    name: "Pharmacogene Variation Consortium (PharmVar)"
+    api_url: "https://www.pharmvar.org/api/v1"
+    website_url: "https://www.pharmvar.org"
+    format: "json"
+    license_note: "Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) License"
+    genes_of_interest: ["CYP2C19", "CYP2C9", "CYP2D6", "DPYD", "SLCO1B1"]
+
+  clinpgx:
+    name: "ClinPGx / PharmGKB"
+    api_url: "https://api.pharmgkb.org/v1/site/prescribingInfo"
+    website_url: "https://www.pharmgkb.org"
+    format: "json"
+    license_note: "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License"
+    genes_of_interest: ["CYP2C19", "CYP2C9", "CYP2D6", "DPYD", "SLCO1B1"]
+    drugs_of_interest: ["clopidogrel", "warfarin", "fluorouracil", "simvastatin", "codeine"]

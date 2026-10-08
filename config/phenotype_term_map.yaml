@@ -1,0 +1,44 @@
+# Standard CPIC Phenotype Vocabulary Mapping Table
+version: "1.0"
+
+standard_terms:
+  - "Normal Metabolizer"
+  - "Intermediate Metabolizer"
+  - "Poor Metabolizer"
+  - "Rapid Metabolizer"
+  - "Ultrarapid Metabolizer"
+  - "Normal Function"
+  - "Decreased Function"
+  - "Poor Function"
+  - "Indeterminate"
+
+mappings:
+  "normal metabolizer": "Normal Metabolizer"
+  "normal": "Normal Metabolizer"
+  "nm": "Normal Metabolizer"
+  "extensive metabolizer": "Normal Metabolizer"
+  "em": "Normal Metabolizer"
+  
+  "intermediate metabolizer": "Intermediate Metabolizer"
+  "intermediate": "Intermediate Metabolizer"
+  "im": "Intermediate Metabolizer"
+  
+  "poor metabolizer": "Poor Metabolizer"
+  "poor": "Poor Metabolizer"
+  "pm": "Poor Metabolizer"
+  "deficient": "Poor Metabolizer"
+  
+  "rapid metabolizer": "Rapid Metabolizer"
+  "rapid": "Rapid Metabolizer"
+  "rm": "Rapid Metabolizer"
+  
+  "ultrarapid metabolizer": "Ultrarapid Metabolizer"
+  "ultrarapid": "Ultrarapid Metabolizer"
+  "um": "Ultrarapid Metabolizer"
+  
+  "normal function": "Normal Function"
+  "decreased function": "Decreased Function"
+  "poor function": "Poor Function"
+  "no function": "Poor Function"
+  "indeterminate": "Indeterminate"
+  "unknown": "Indeterminate"

@@ -19,3 +19,9 @@ research:
   catboost_iterations: 300
   catboost_depth: 6
   catboost_learning_rate: 0.05
+
+knowledge:
+  active_source: "existing_rules"
+  snapshot_dir: "data/knowledge"
+  recommendations_path: "data/knowledge/recommendations/recommendations.parquet"
+

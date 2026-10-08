@@ -1,0 +1,15 @@
+{
+  "source": "pharmvar",
+  "snapshot_date": "2026-10-09",
+  "source_version": "2022.1",
+  "license_note": "Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) License",
+  "retrieved_at": "2026-10-08T18:56:52.946454Z",
+  "files": [
+    {
+      "path": "pharmvar_raw_recommendations.json",
+      "url": "https://www.pharmvar.org/api/v1",
+      "sha256": "db8427d40f2eeb4ef02c179698ea2c0405a59cc5c90323e85834fd7d5d51b0f8",
+      "bytes": 9229
+    }
+  ]
+}

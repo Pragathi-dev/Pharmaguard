@@ -1,0 +1,15 @@
+{
+  "source": "cpic",
+  "snapshot_date": "2026-10-09",
+  "source_version": "2022.1",
+  "license_note": "Creative Commons Attribution 4.0 International (CC BY 4.0) License",
+  "retrieved_at": "2026-10-08T18:56:48.742418Z",
+  "files": [
+    {
+      "path": "cpic_raw_recommendations.json",
+      "url": "https://api.cpicpgx.org/v1/recommendation",
+      "sha256": "01a338a3921f8b502336f448fcc68d866e97aa54542a3e7862f077e4e01de40a",
+      "bytes": 2758452
+    }
+  ]
+}

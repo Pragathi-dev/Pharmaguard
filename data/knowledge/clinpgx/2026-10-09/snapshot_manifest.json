@@ -1,0 +1,15 @@
+{
+  "source": "clinpgx",
+  "snapshot_date": "2026-10-09",
+  "source_version": "2022.1",
+  "license_note": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License",
+  "retrieved_at": "2026-10-08T18:56:53.345840Z",
+  "files": [
+    {
+      "path": "clinpgx_raw_recommendations.json",
+      "url": "https://api.pharmgkb.org/v1/site/prescribingInfo",
+      "sha256": "db8427d40f2eeb4ef02c179698ea2c0405a59cc5c90323e85834fd7d5d51b0f8",
+      "bytes": 9229
+    }
+  ]
+}
