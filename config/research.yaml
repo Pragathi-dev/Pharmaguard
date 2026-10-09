@@ -1,0 +1,82 @@
+# PharmaGuard Phase 5 Research Dataset & Experiment Configuration
+version: "1.0"
+
+seed: 42
+split_seed: 2026
+
+splits:
+  proportions:
+    train: 0.60
+    val: 0.10
+    calib: 0.15
+    test: 0.15
+  stratify_by: ["superpopulation", "rare_phenotype"]
+  output_path: "data/processed/splits.parquet"
+  hash_path: "data/processed/splits.sha256"
+
+degradation:
+  masks_dir: "data/processed/degradation_masks"
+  freeze_val_calib_test: true
+  grid:
+    - type: "none"
+      level: 0.0
+      seed: 42
+    - type: "random_dropout"
+      level: 0.05
+      seed: 101
+    - type: "random_dropout"
+      level: 0.10
+      seed: 102
+    - type: "random_dropout"
+      level: 0.25
+      seed: 103
+    - type: "random_dropout"
+      level: 0.50
+      seed: 104
+    - type: "array_like"
+      level: 1.0
+      seed: 201
+      array_panel_config: "config/array_panels/sample_array_panel.yaml"
+    - type: "low_coverage"
+      level: 0.20
+      seed: 301
+    - type: "unphased"
+      level: 1.0
+      seed: 401
+
+rare_classes:
+  rare_class_threshold: 20
+  coarse_groupings:
+    CYP2C19:
+      "Ultrarapid Metabolizer": "Rapid_or_Ultrarapid"
+      "Rapid Metabolizer": "Rapid_or_Ultrarapid"
+      "Normal Metabolizer": "Normal"
+      "Intermediate Metabolizer": "Reduced"
+      "Poor Metabolizer": "Reduced"
+    CYP2C9:
+      "Normal Metabolizer": "Normal"
+      "Intermediate Metabolizer": "Reduced"
+      "Poor Metabolizer": "Reduced"
+    CYP2D6:
+      "Ultrarapid Metabolizer": "Rapid_or_Ultrarapid"
+      "Normal Metabolizer": "Normal"
+      "Intermediate Metabolizer": "Reduced"
+      "Poor Metabolizer": "Reduced"
+    DPYD:
+      "Normal Metabolizer": "Normal"
+      "Intermediate Metabolizer": "Reduced"
+      "Poor Metabolizer": "Reduced"
+    SLCO1B1:
+      "Normal Function": "Normal"
+      "Decreased Function": "Reduced"
+      "Poor Function": "Reduced"
+
+features:
+  include_ancestry: false
+  genotype_dosage_encoding:
+    HOM_REF: 0
+    HET: 1
+    HOM_ALT: 2
+    MISSING: -1
+  missing_indicator_prefix: "m__"
+  genotype_feature_prefix: "g__"

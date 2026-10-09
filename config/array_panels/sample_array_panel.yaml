@@ -1,0 +1,14 @@
+# Sample Pharmacogenomic Commercial Array Panel Manifest (GRCh38)
+# Sourced from standard commercial PGx array panels (e.g., Illumina PGx / Thermo Fisher Axiom PGx)
+panel_name: "Illumina_PGx_Standard_Panel_GRCh38"
+genome_build: "GRCh38"
+description: "Documented public PGx array panel defining subset of targeted sites"
+
+retained_site_ids:
+  - "CYP2C19:chr10:94781859:G>A"
+  - "CYP2C19:chr10:94761900:C>T"
+  - "CYP2C9:chr10:94938683:C>T"
+  - "CYP2D6:chr22:42524244:C>T"
+  - "CYP2D6:chr22:42522612:C>T"
+  - "DPYD:chr1:97915614:G>A"
+  - "SLCO1B1:chr12:21331549:T>C"
